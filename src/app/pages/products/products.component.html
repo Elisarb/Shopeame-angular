@@ -1,0 +1,14 @@
+<main>
+  <div class="tarjeta">
+    <div>
+      <h1>Listado de productos ({{products.length}})</h1>
+      <p-dropdown [options]="products" [(ngModel)]="selectedProduct" optionLabel="name"></p-dropdown>
+    </div>
+    <div class="productos">
+        <app-gallery [products]= "products" ></app-gallery>
+
+    </div>
+
+
+  </div>
+</main>

@@ -1,0 +1,44 @@
+<main>
+  <div class="tarjeta">
+    <div>
+      <h1>Creación/edición de productos</h1>
+    </div>
+    <form [formGroup]="ProductRegisterForm" (ngSubmit)="submit()"> <!--Asociamos nuestro formulario con mi variable de formulario del ts-->
+      <div class="c-form--line">
+        <p>Nombre del producto: </p><input type="text" formControlName="name" placeholder="Por ej: Tiesto para planta">
+      </div>
+      <div>
+        <p>Precio: </p><input type="text" formControlName="price" placeholder="Por ej: 9.50">
+      </div>
+      <div>
+        <p>Descripción: </p><input type="text" formControlName="description" placeholder="Por ej: Lo más vendido este mes">
+      </div>
+      <div>
+        <p>Ruta de la imagen: </p><input type="text" formControlName="image" placeholder="Por ej: http://blabla.com/img.jpg">
+      </div>
+      <div>
+        <p>Opiniones: </p><input type="text" formControlName="stars" placeholder="Por ej: 4.28">
+      </div>
+      <div class="c-button">
+        <button type="button" (click)="submit()">Guardar</button>
+      </div>
+  </form>
+
+    <!-- <form [formGroup]="ProductRegisterForm" (ngSubmit) = "submit()">
+      <p>Nombre del producto</p>
+      <input type="text" formControlName = "name">
+      <span *ngIf= "isSubmit && ProductRegisterForm.controls['name'].errors && ProductRegisterForm.controls['name'].errors['minlenght']">Este campo tiene que tener mínimo 3 caracteres</span>
+      <p>Precio del producto</p>
+      <input type="text" formControlName = "price">
+      <span *ngIf= "isSubmit && ProductRegisterForm.controls['price'].errors && ProductRegisterForm.controls['price'].errors['minlenght']">Este campo tiene que tener mínimo 3 caracteres</span>
+      <p>Descripción del producto</p>
+      <input type="text" formControlName = "description">
+      <p>Ruta de la imagen</p>
+      <input type="text" formControlName = "img">
+      <span *ngIf= "isSubmit && ProductRegisterForm.controls['img'].errors && ProductRegisterForm.controls['img'].errors['minlenght']">Este campo tiene que tener mínimo 3 caracteres</span>
+
+      <button>Enviar</button>
+
+    </form> -->
+  </div>
+</main>

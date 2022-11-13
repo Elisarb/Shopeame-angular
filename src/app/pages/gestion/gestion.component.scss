@@ -1,0 +1,24 @@
+main{
+  background-color: #eeeeee;
+  margin:0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tarjeta{
+  width:60%;
+  background-color: white;
+  margin: 20px 20px 20px 20px;
+  border-radius: 8px;
+  box-shadow:1px 1px 2px rgba(51, 51, 51, 0.703);
+  padding: 30px 20px 30px 20px;
+}
+
+h1{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 18px;
+  color:black;
+  height:50px;
+  margin:20px;
+}
