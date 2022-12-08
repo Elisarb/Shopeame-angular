@@ -18,6 +18,8 @@ export class ProductsService {
 
   }
 
+  BASEURL:any= "https://shopeame-backend-wine.vercel.app/products";
+
 
   // constructor(private http: HttpClient) {   }
 
@@ -29,24 +31,24 @@ export class ProductsService {
   constructor(private http: HttpClient) { }
 
   getProducts(){
-    return this.http.get("http://localhost:3000/products")
+    return this.http.get(this.BASEURL)
   }
 
   getProductByid(id:number){
 
-    return this.http.get("http://localhost:3000/products/"+id)
+    return this.http.get(this.BASEURL + "/"+id)
   }
 
   addProduct(product:any){
-   this.http.post("http://localhost:3000/products",product).subscribe()
+   this.http.post(this.BASEURL,product).subscribe()
 
   }
   delete(id:number){
-    return this.http.delete("http://localhost:3000/products" + '/' + id)
+    return this.http.delete(this.BASEURL + '/' + id)
   }
 
   putProduct(nuevoProducto:any){
-    return this.http.put("http://localhost:3000/products" + '/' + nuevoProducto.id,nuevoProducto)
+    return this.http.put(this.BASEURL + '/' + nuevoProducto.id,nuevoProducto)
   }
 
 }
